@@ -21,4 +21,12 @@ class LinkedList
       @first.next = Node.new(value)
     end
   end
+
+  def each
+    current_node = first
+    while current_node != nil
+      yield current_node.value
+      current_node = current_node.next
+    end
+  end
 end
