@@ -21,4 +21,14 @@ class LinkedList
       @first.next = Node.new(value)
     end
   end
+
+  # Iterate through LinkedList and yield values to block.
+  def iterate
+    current_node = first
+
+    while current_node != nil
+      yield current_node.value
+      current_node = current_node.next
+    end
+  end
 end
