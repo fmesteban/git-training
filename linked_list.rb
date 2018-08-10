@@ -22,6 +22,14 @@ class LinkedList
     end
   end
 
+  def print
+    current_node = first
+    while current_node != nil
+      p current_node.value
+      current_node = current_node.next
+    end
+  end
+
   def each
     current_node = first
     while current_node != nil
